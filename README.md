@@ -53,16 +53,39 @@ After transformation and differencing, to prove the stationary national inflatio
 <div align="center">
   
 ![image](https://github.com/dishaadis/Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter/assets/82490582/19e554a6-d57c-435d-ad67-8af4a853e622)
+
 </div>
+
 Based on the second Augmented Dickey-Fuller (ADF) test, it is proven that the national inflation rate data is stationary concerning the variance and the mean, so the inflation rate data can be continued by identifying the ARIMA model by checking the ACF (Autocorrelation Function) plot and PACF (Partial Autocorrelation Function).
 </p>
 
 ### 2. ARIMA Model Identification
+<p align="justify">
+In determining the model, the lag that comes out on the PACF plot determines the AR model, while the lag that comes out on the ACF plot determines the MA model. It can be seen that the PACF plot exits at lags 1 and 12, while the ACF plot exits at lags 1 and 12.
+<div align="center">
+  
+![image](https://github.com/dishaadis/Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter/assets/82490582/6213e3c8-186f-41ee-9fac-071d8bcef305) ![image](https://github.com/dishaadis/Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter/assets/82490582/4fb71d76-f36a-436a-9d2a-09ee624279e1)
 
+</div>  
+Based on the significant lag in the PACF plot and ACF plot, several ARIMA models can be identified, including the following:
+<div align="center">
+  
+![image](https://github.com/dishaadis/Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter/assets/82490582/52febe3c-387d-484d-939b-d779a2e5ab34)
 
+</div>
+Based on the table above, it can be seen that the ARIMA model (1,1,0) meets the assumptions of the significance test and the white noise test. However, of the significant ARIMA models, none of the ARIMA models satisfies the normality test. Abnormalities from these residuals may indicate a condition of heteroscedasticity which indicates an ARCH-GARCH process. So, of the four significant ARIMA models, the ARIMA model (1,1,0) was chosen to be the best ARIMA model. Because the ARIMA(1,1,0) model contains abnormalities, a heteroscedasticity test is performed using the Ljung-Box formula from the square of the residual. The heteroscedasticity test on the ARIMA(1,1,0) model is carried out as follows:
+<div align="center">
+  
+![image](https://github.com/dishaadis/Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter/assets/82490582/a1076db2-be1d-43d7-ac67-0421d2f35850)
 
+</div>
+Because the residual square of the ARIMA model (1,1,0) is heteroscedastic, it is less efficient to predict national inflation rate data using the ARIMA model. To get better prediction results, it is necessary to do time series modeling that considers the presence of heteroscedasticity, namely the ARCH-GARCH model.
+</p>
 
-
+### 3. ARCH-GARCH Model Identification
+<p align="justify">
+  
+</p>
 
 
 
