@@ -115,10 +115,35 @@ ARCH (1) Model :
 </p>
 </p>
 
+### 4. Application of Kalman Filters for Error Correction
+<p align="justify">
+In forecasting the national inflation rate using the ARCH(1) model, the MAPE value is 34.662%. From the MAPE calculation results, it can be concluded that the ARCH(1) model needs to be better because the MAPE value is > 10%. The application of the Kalman Filter is an estimate with a prediction step one step ahead and then corrected with actual data so that the error value can be estimated using the magnitude of the covariance value, namely system noise and measurement noise. With the assumed covariance value, it is expected that there will be an influence on the estimation of the national inflation rate. The error-degree polynomial equation is used to correct the MAPE value in the forecasting results of the ARCH(1) model by using partial data $u_i$, namely the difference between the forecast data and the actual data $m_i$. In the national inflation rate data, a Kalman filter with a degree 1 polynomial is applied, and a Kalman filter with a degree 2 polynomial. Kalman Filter stages can be written as follows:
+</p>
 
+Prediction Stage :
+<p align="center">
+$x ̂_{t ̅+1}   =A_t x ̂_t$
+</p>
 
+<p align="center">
+$P_{t ̅+1}=A_t P_t A_t^T+Q_t$
+</p>
 
+Correction Stage :
+<p align="center">
+$K_{t+1}=P_{t ̅+1} H_{t+1}^T (H_{t+1}  P_{t ̅+1}  H_{t+1}^T +R_{t+1} )^{-1}$
+</p>
 
+<p align="center">
+$x ̂_{t+1}=x ̂_{t ̅+1}+K_{t+1} [z_{t+1}-H_{t+1} x ̂_{t ̅+1}]$
+</p>
+
+<p align="center">
+$P_{t+1}=[I-K_{t+1} H_{t+1}] P_{t ̅+1}$  
+</p>
+</p>
+
+### 5. Comparison of the Kalman ARCH and ARCH Filter Models
 
 
 
