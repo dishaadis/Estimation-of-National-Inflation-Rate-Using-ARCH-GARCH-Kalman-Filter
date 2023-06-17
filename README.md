@@ -1,5 +1,6 @@
-# Estimation of National Inflation Rate Using ARCH-GARCH Kalman Filter
-
+<p align="center">
+<h1>Estimation of National Inflation Rate Using ARCH-GARCH Kalman Filter</h1>
+</p>
 <p align="center">
 Undergraduate Final Project on behalf of Radisha Fanni Sianti
 </p>
