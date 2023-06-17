@@ -17,24 +17,47 @@ The data used is national inflation rate secondary data from the official websit
 ## Visualization of National Inflation Data
 <div align="center">
   
-![image](https://github.com/dishaadis/Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter/assets/82490582/1c1c4d90-4639-4ef6-8a62-02e5701e01cc)
+  ![image](https://github.com/dishaadis/Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter/assets/82490582/f0189a17-8354-4558-8928-a83586245284)
 
 </div>
 <p align="justify">
-Visually it can be seen that the time series plot of the national inflation rate data has an irregular and fluctuating pattern so that the data can be categorized into data that is not stationary concerning the mean. In addition, it can be seen that the data does not fluctuate around the median value, and the trend does not follow the horizontal axis. So it can be concluded that the national inflation rate data is not stationary.
+Visually it can be seen that the time series plot of national inflation rate data has an irregular and fluctuating pattern so that the data can be categorized into data that is not stationary concerning the mean. In addition, it can be seen that the data does not fluctuate around the median value, and the trend does not follow the horizontal axis. So the national inflation rate data is not stationary concerning the mean.
+</p>
+<div align="center">
+  
+  ![image](https://github.com/dishaadis/Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter/assets/82490582/f258cf31-3954-4bd2-9728-ea5aebd3073a)
+
+</div>
+<p align="justify">
+The Box-Cox plot shows the value of λ with a 95% confidence value between -0.43 and 0.62 with an estimated value of 0.07 and a rounded value of 0. This shows that the national inflation rate data is not stationary concerning the variance because the rounded value is not equal to 1. To overcome this problem, a Box-Cox Transformation can be performed to obtain a rounded value equal to 1.
 </p>
 
 ## Analysis Results
 ### 1. Stasionarity
+#### 1.1 Stationarity of Variance
+<p align="justify">
+It is known that the national inflation rate is not stationary with respect to the variance, it is necessary to carry out a transformation using the following formula:
+<p align="center">
+  $Y_t = ln(X_t)$ 
+</p>
+</p>
+
+#### 1.2 Stationarity of Mean
 <p align="justify">
 Stationarity of time series data can be done by carrying out the Augmented Dickey-Fuller (ADF) test. The Augmented Dickey-Fuller test is a formal concept introduced by David Dickey and Wayne Fuller to determine whether data has a unit root. Based on the time series plot, it can be seen that the national inflation rate is not stationary concerning the mean, so it is necessary to do differencing on the national inflation rate data. Differentencing can be done with the following formula:
 <p align="center">
   $Z_t = Y_t - Y_{t-1}$ 
 </p>
+After transformation and differencing, to prove the stationary national inflation rate data, it is necessary to carry out the Augmented Dickey-Fuller (ADF) test with the following results:
 
+<div align="center">
+  
+![image](https://github.com/dishaadis/Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter/assets/82490582/19e554a6-d57c-435d-ad67-8af4a853e622)
+</div>
+Based on the second Augmented Dickey-Fuller (ADF) test, it is proven that the national inflation rate data is stationary concerning the variance and the mean, so the inflation rate data can be continued by identifying the ARIMA model by checking the ACF (Autocorrelation Function) plot and PACF (Partial Autocorrelation Function).
 </p>
 
-
+### 2. ARIMA Model Identification
 
 
 
