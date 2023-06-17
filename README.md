@@ -1,1 +1,4 @@
-# Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter
+# Estimation of National Inflation Rate Using ARCH-GARCH Kalman Filter
+
+## Abstract
+The national inflation rate is an important indicator in analyzing a country's economic growth. Inflation rates that are managed properly can prevent a country's economy from declining. In the national inflation rate data, the ARIMA (Autoregressive Integrated Moving Average) model was used, and heteroscedasticity was detected, so the ARCH-GARCH (Autoregressive Conditional Heteroskedasticity-Generalized Conditional Heteroskedasticity) time series model was used. The appropriate model is ARCH(1), with a very large MAPE (Mean Absolute Percentage Error) value of 34.662%. Therefore, error correction is carried out using the Kalman Filter to get a smaller error value. The final results show that the Kalman Filter can improve the estimation results marked by the MAPE ARCH-Kalman Filter value being smaller than the ARCH model. The best estimation result on the national inflation rate data is the Kalman Filter polynomial of degree 2 with a value of Q=R=0.01, with the smallest MAPE value of 1.0035%.
