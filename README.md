@@ -73,22 +73,47 @@ Based on the significant lag in the PACF plot and ACF plot, several ARIMA models
 ![image](https://github.com/dishaadis/Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter/assets/82490582/52febe3c-387d-484d-939b-d779a2e5ab34)
 
 </div>
+<p align="justify">
 Based on the table above, it can be seen that the ARIMA model (1,1,0) meets the assumptions of the significance test and the white noise test. However, of the significant ARIMA models, none of the ARIMA models satisfies the normality test. Abnormalities from these residuals may indicate a condition of heteroscedasticity which indicates an ARCH-GARCH process. So, of the four significant ARIMA models, the ARIMA model (1,1,0) was chosen to be the best ARIMA model. Because the ARIMA(1,1,0) model contains abnormalities, a heteroscedasticity test is performed using the Ljung-Box formula from the square of the residual. The heteroscedasticity test on the ARIMA(1,1,0) model is carried out as follows:
+</p>
 <div align="center">
   
 ![image](https://github.com/dishaadis/Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter/assets/82490582/a1076db2-be1d-43d7-ac67-0421d2f35850)
 
 </div>
+<p align="justify">
 Because the residual square of the ARIMA model (1,1,0) is heteroscedastic, it is less efficient to predict national inflation rate data using the ARIMA model. To get better prediction results, it is necessary to do time series modeling that considers the presence of heteroscedasticity, namely the ARCH-GARCH model.
 </p>
 
 ### 3. ARCH-GARCH Model Identification
 <p align="justify">
-  
+The first ARCH-GARCH model was developed by plotting the ACF and PACF squared residuals. The ACF plot shows cuts off at lags 1 and 12, and the PACF plot shows cuts off at lags 1 and 12.
 </p>
+<div align="center">
+  
+![image](https://github.com/dishaadis/Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter/assets/82490582/ef26deb9-1f5c-4898-9c8a-3ad5ece909df)
 
+</div>
+<p align="justify">
+Based on the significant lag in the PACF plot and the squared residual ACF plot, several GARCH models, including the ARCH(1) and GARCH(1,1) models, can be identified. The best model is the model that has significant parameters and the smallest AIC value.
+</p>
+<div align="center">
+  
+![image](https://github.com/dishaadis/Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter/assets/82490582/084675c0-82a4-41f8-b64a-b54828a7e603)
 
+</div>
+<p align="justify">
+The results of the analysis show that the best models for national inflation rate data are the ARIMA (1,1,0) model and the ARCH (1) model. The national inflation rate model can be written as follows:
 
+ARIMA (1,1,0) Model:
+<p align="center">
+  $Z_t = 0,107501 Z_t + u_t$  with $Z_t = Y_t + Y_{t-1}$ and $Y_t = ln(X_t)$
+</p>
+ARCH (1) Model :
+<p align="center">
+  $σ_t^2 = 0,004993 + 0,928125 u_{t-1}^2$ 
+</p>
+</p>
 
 
 
