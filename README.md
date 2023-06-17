@@ -144,17 +144,14 @@ $P_{t+1}=[I-K_{t+1} H_{t+1}] P_{t ̅+1}$
 </p>
 
 ### 5. Comparison of the Kalman ARCH and ARCH Filter Models
-
-
-
-
-
 <p align="justify">
+At this stage, the ARCH model has been tested, and the forecasting results improved by using the Kalman filter for degree 1 and 2 polynomials. Based on the simulations performed, each model has its own estimated error value. Therefore, it is necessary to carry out an evaluation stage to determine the best model by comparing the MAPE values ​​of each model. MAPE is a measure of error that can be calculated by finding the mean percentage absolute error ratio with the actual data. Following are the results of the MAPE values ​​of each model.
 </p>
+<div align="center">
+  
+![image](https://github.com/dishaadis/Estimation-of-National-Inflation-Rate-Using-ARCH-GARCH-Kalman-Filter/assets/82490582/fca4baad-17bc-496e-9f3e-7d9eba67e5ee)
+
+</div>
 <p align="justify">
+The table above shows that the best MAPE value results are obtained after applying the Kalman Filter which is marked by the MAPE value which is small and close to the actual data. In addition, it can be seen that for each Q value and R value taken in the application of the Kalman Filter the MAPE value becomes smaller when the degree of the polynomial increases.
 </p>
-<p align="justify">
-</p>
-
-
-
